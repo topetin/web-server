@@ -9,7 +9,7 @@ const forecast = (lat, lng, callback) => {
         } else if (body.code === 400) {
             callback('Unable to fetch weather for that location.', undefined)
         } else {
-            callback(undefined, `${body.daily.data[0].summary} It's currently ${body.currently.temperature} degrees out. There is a ${body.currently.precipProbability}% chance of rain)`)
+            callback(undefined, `${body.daily.data[0].summary} It's currently ${body.currently.temperature} degrees out. There is a ${body.currently.precipProbability}% chance of rain`)
         }
     });
 }
